@@ -13,11 +13,16 @@ class ViewController: UIViewController {
         counterLabel.text = "\(counter)"
         counter += 1
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-        AudioServicesPlaySystemSound(1205)
+        AudioServicesPlaySystemSound(1117)
+        
 
       
     }
-
+    @IBAction func Clear(_ sender: Any) {
+        counterLabel.text = "\(counter)"
+        counter = 0
+    }
+    
     @IBOutlet weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
